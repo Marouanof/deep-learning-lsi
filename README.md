@@ -1,4 +1,4 @@
-# Deep Learning
+﻿# Deep Learning
 
 Travaux pratiques de Deep Learning.
 
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ## Structure du dépôt
 
 ```text
-deep-learning-mbd/
+deep-learning-lsi/
 ├── README.md              # ce fichier — index des labs
 ├── requirements.txt       # dépendances communes
 ├── .gitignore
