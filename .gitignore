@@ -1,0 +1,21 @@
+# --- Données téléchargées (ne pas versionner) ---
+data/
+*.csv
+
+# --- Kaggle ---
+kaggle.json
+.kaggle/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- OS / éditeurs ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
