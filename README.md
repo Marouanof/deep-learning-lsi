@@ -9,7 +9,7 @@ Travaux pratiques de Deep Learning.
 | Lab | Sujet | Concepts clés | Rapport |
 |---|---|---|---|
 | **Lab 1** | **DNN / MLP avec PyTorch** — régression + classification multi-classes | `nn.Module`, boucle d'entraînement, `GridSearchCV`, Loss/Epochs, régularisation, SMOTE | [→ voir le rapport](lab1_pytorch_dnn/README.md) |
-| **Lab 2** | **Vision avec PyTorch** — CNN, Faster R-CNN, transfert (VGG16 / AlexNet), ViT | convolution, pooling, GPU mode, fine-tuning, ViT from scratch, comparaison de métriques | *(en cours)* |
+| **Lab 2** | **Vision avec PyTorch** — CNN, Faster R-CNN, transfert (VGG16 / AlexNet), ViT | convolution, pooling, GPU mode, fine-tuning, ViT from scratch, comparaison de métriques | [→ voir le rapport](lab2_cnn_vit/README.md) |
 
 ---
 
@@ -26,16 +26,18 @@ Prise en main de **PyTorch** sur deux tâches d'apprentissage supervisé :
 
 Fichiers : `partie1_regression_nyse.ipynb`, `partie2_classification_maintenance.ipynb`
 
-### Lab 2 — Vision avec PyTorch *(en cours)*
+### [Lab 2 — Vision avec PyTorch](lab2_cnn_vit/README.md)
 
-Classification d'images sur **[MNIST](https://www.kaggle.com/datasets/hojjatk/mnist-dataset)** en mode **GPU** :
+Classification d'images sur **[MNIST](https://www.kaggle.com/datasets/hojjatk/mnist-dataset)** en mode **GPU** (Colab, Tesla T4) :
 
 | Partie | Modèles | Questions |
 |---|---|---|
 | 1 | CNN construit avec PyTorch, Faster R-CNN, VGG16 et AlexNet pré-entraînés | 4 questions : architecture CNN, adaptation Faster R-CNN, comparaison des métriques (Accuracy, F1, Loss, temps de training), fine-tuning |
 | 2 | Vision Transformer (ViT) construit **from scratch** | 2 questions : architecture ViT + classification MNIST, interprétation et comparaison avec la partie 1 |
 
-Fichiers prévus : `partie1_cnn_classifieur.ipynb`, `partie2_vit.ipynb`
+Fichiers : `partie1_cnn_classifieur.ipynb`, `partie2_vit.ipynb`
+
+Résultats (test) : CNN **0.9906** (68 s), Faster R-CNN **0.9940** (21.5 min), VGG16 0.9876, AlexNet 0.9890, ViT from scratch **0.9786** (176 s) — analyse détaillée dans le [rapport du lab](lab2_cnn_vit/README.md).
 
 ---
 
