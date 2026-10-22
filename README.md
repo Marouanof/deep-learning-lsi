@@ -64,7 +64,7 @@ deep-learning-lsi/
 │   ├── partie1_regression_nyse.ipynb
 │   └── partie2_classification_maintenance.ipynb
 └── lab2_cnn_vit/
-    ├── Atelier2.txt
+    ├── Atelier2.pdf
     ├── README.md
     ├── partie1_cnn_classifieur.ipynb
     └── partie2_vit.ipynb
