@@ -1,10 +1,17 @@
-# Dépendances — Lab 1 Deep Learning (PyTorch)
+# Dépendances — Deep Learning (PyTorch)
 # Testé sur Google Colab (Python 3.10+)
 
+# commun
 torch>=2.0
 numpy>=1.24
 pandas>=2.0
 matplotlib>=3.7
-seaborn>=0.12
 scikit-learn>=1.3
+
+# Lab 1
+seaborn>=0.12
 imbalanced-learn>=0.11
+
+# Lab 2 (vision, GPU)
+torchvision>=0.15
+# tqdm>=[...]  # viendra selon les besoins réels des notebooks

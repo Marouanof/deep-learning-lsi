@@ -9,6 +9,7 @@ Travaux pratiques de Deep Learning.
 | Lab | Sujet | Concepts clés | Rapport |
 |---|---|---|---|
 | **Lab 1** | **DNN / MLP avec PyTorch** — régression + classification multi-classes | `nn.Module`, boucle d'entraînement, `GridSearchCV`, Loss/Epochs, régularisation, SMOTE | [→ voir le rapport](lab1_pytorch_dnn/README.md) |
+| **Lab 2** | **Vision avec PyTorch** — CNN, Faster R-CNN, transfert (VGG16 / AlexNet), ViT | convolution, pooling, GPU mode, fine-tuning, ViT from scratch, comparaison de métriques | *(en cours)* |
 
 ---
 
@@ -24,6 +25,17 @@ Prise en main de **PyTorch** sur deux tâches d'apprentissage supervisé :
 | 2 | **Classification multi-classes** | [Machine Predictive Maintenance](https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification) | type de panne (`Failure Type`) |
 
 Fichiers : `partie1_regression_nyse.ipynb`, `partie2_classification_maintenance.ipynb`
+
+### Lab 2 — Vision avec PyTorch *(en cours)*
+
+Classification d'images sur **[MNIST](https://www.kaggle.com/datasets/hojjatk/mnist-dataset)** en mode **GPU** :
+
+| Partie | Modèles | Questions |
+|---|---|---|
+| 1 | CNN construit avec PyTorch, Faster R-CNN, VGG16 et AlexNet pré-entraînés | 4 questions : architecture CNN, adaptation Faster R-CNN, comparaison des métriques (Accuracy, F1, Loss, temps de training), fine-tuning |
+| 2 | Vision Transformer (ViT) construit **from scratch** | 2 questions : architecture ViT + classification MNIST, interprétation et comparaison avec la partie 1 |
+
+Fichiers prévus : `partie1_cnn_classifieur.ipynb`, `partie2_vit.ipynb`
 
 ---
 
@@ -44,11 +56,16 @@ deep-learning-lsi/
 ├── README.md              # ce fichier — index des labs
 ├── requirements.txt       # dépendances communes
 ├── .gitignore
-└── lab1_pytorch_dnn/
-    ├── Atelier1.pdf
+├── lab1_pytorch_dnn/
+│   ├── Atelier1.pdf
+│   ├── README.md
+│   ├── partie1_regression_nyse.ipynb
+│   └── partie2_classification_maintenance.ipynb
+└── lab2_cnn_vit/
+    ├── Atelier2.txt
     ├── README.md
-    ├── partie1_regression_nyse.ipynb
-    └── partie2_classification_maintenance.ipynb
+    ├── partie1_cnn_classifieur.ipynb
+    └── partie2_vit.ipynb
 ```
 
 Les **datasets ne sont pas versionnés** (voir `.gitignore`) : ils se téléchargent depuis Kaggle.
