@@ -11,6 +11,7 @@ Travaux pratiques de Deep Learning.
 | **Lab 1 (Atelier 1)** | **DNN / MLP avec PyTorch** — régression + classification multi-classes | `nn.Module`, boucle d'entraînement, `GridSearchCV`, Loss/Epochs, régularisation, SMOTE | [→ voir le rapport](lab1_pytorch_dnn/README.md) |
 | **Lab 2 (Atelier 2)** | **Vision avec PyTorch** — CNN, Faster R-CNN, transfert (VGG16 / AlexNet), ViT | convolution, pooling, GPU mode, fine-tuning, ViT from scratch, comparaison de métriques | [→ voir le rapport](lab2_cnn_vit/README.md) |
 | **Atelier 3 / Lab 3** | **NLP arabe & génération de texte** — Partie 1 RNN/AraBERT + Partie 2 GPT-2 | BeautifulSoup, TF-IDF, AraBERT, RNN / BiRNN / GRU / LSTM, GPT-2 124M, AdamW + warmup, top-k sampling, perplexité | [→ rapport](lab3/README.md) · [→ notebook unique](lab3/lab3.ipynb) |
+| **Lab 4 (Atelier 4)** | **AE, VAE et GANs** - Partie 1 Auto-Encodeur / VAE sur MNIST, Partie 2 DCGAN sur Abstract Art Gallery | convolution, espace latent 2D, KL divergence, reparametrisation, DCGAN, Generator/Discriminator, BCE loss | [voir le rapport](lab4_ae_vae_gan/README.md) - [partie 1](lab4_ae_vae_gan/partie1_ae_vae.ipynb) - [partie 2](lab4_ae_vae_gan/partie2_gan.ipynb) |
 
 ---
 
@@ -57,6 +58,12 @@ Fine-tuning de **GPT-2 124M** sur 500 paragraphes maison (`AI: … <|endoftext|>
 Résultats : loss de validation **1,7216 → 0,7102** sur 5 epochs (perplexité **5,59 → 2,03**), 3 paragraphes générés avec un `distinct-2` de 0,78–0,95 — extraits dans le [rapport](lab3/README.md).
 
 ---
+
+### [Lab 4 - AE, VAE et GANs](lab4_ae_vae_gan/README.md)
+
+Modeles generatifs : AE et VAE sur MNIST (espace latent 2D, KL divergence, generation), puis DCGAN sur Abstract Art Gallery (generation 64x64).
+
+Fichiers : lab4_ae_vae_gan/partie1_ae_vae.ipynb, lab4_ae_vae_gan/partie2_gan.ipynb.
 
 ## Environnement
 
