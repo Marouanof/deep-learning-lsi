@@ -43,6 +43,13 @@ Convention : une question de l'énoncé = une cellule de code, commentée en fra
 - **Décodeur** : `Linear(2 → 64·7·7) → Unflatten → ConvTranspose(64→32) → ReLU → ConvTranspose(32→1) → Sigmoid`.
 - **VAE** : l'encodeur produit μ et log σ² ; reparamétrisation z = μ + σ·ε ; même décodeur.
 
+### Résultats (exécution Colab, T4, 15 epochs)
+
+| Modèle | Loss finale | Détail |
+|---|---|---|
+| AE | MSE = **0.04397** | reconstruction très bonne |
+| VAE | total = **39.15812** | recon = 34.90491, KL = 4.25321 |
+
 ### Résultats attendus
 
 | Modèle | Reconstruction | Génération | Espace latent |
@@ -76,11 +83,22 @@ Convention : une question de l'énoncé = une cellule de code, commentée en fra
 - **Générateur** : z (100,1,1) → 5 blocs `ConvTranspose2d` + BatchNorm + ReLU → Tanh, sortie 64×64×3 dans [-1,1].
 - **Discriminateur** : 5 blocs `Conv2d` + BatchNorm + LeakyReLU → Sigmoid, sortie scalaire (réel/faux).
 
+### Résultats (exécution Colab, T4, 50 epochs, 2782 images)
+
+| Epoch | LossD | LossG |
+|---|---|---|
+| 01 | 1.2417 | 19.4967 |
+| 10 | 0.3030 | 5.2497 |
+| 25 | 0.4678 | 3.5595 |
+| 50 | **0.6831** | **4.9962** |
+
+Temps total ≈ 50 × 17 s ≈ 14 min.
+
 ### Évaluation et conclusion
 
-- **Loss** : la loss du Discriminateur reste autour de ~0.5–1.0 et celle du Générateur oscille ; un équilibre (ni effondrement du G, ni D trop fort) indique un entraînement stable.
+- **Loss** : la loss du Discriminateur reste autour de ~0.3–0.7 et celle du Générateur oscille entre 3 et 8 ; l'équilibre est atteint sans effondrement du G ni D trop fort → entraînement stable.
 - **KL divergence** : **non applicable** aux GANs — ils n'optimisent pas de borne variationnelle et n'imposent pas de prior explicite dans la loss. On suit les courbes de loss D/G et la qualité visuelle.
-- **Qualité** : les images générées capturent le style abstrait (couleurs, textures) mais peuvent souffrir de mode collapse et de flou ; plus d'epochs / tuning (lr, architecture) améliore le résultat.
+- **Qualité** : les images générées (64×64) capturent le style abstrait (couleurs, textures) mais restent floues et peuvent souffrir de mode collapse ; plus d'epochs / tuning (lr, architecture) améliore le résultat.
 - **Choix** : DCGAN simple et efficace pour démarrer ; WGAN-GP ou StyleGAN pour une meilleure stabilité/qualité.
 
 ## 5. Incidents possibles et solutions
